@@ -6,21 +6,21 @@ import React from "react";
 // Re-using the global constant for consistency
 const ORANGE_ACCENT = "#D87D4A";
 
-const XX99MarkIIFeature = () => {
+const ZX7Speaker = () => {
   return (
     // Max width container for overall page alignment, centered, with padding
     <section
-      className="max-w-[1440px] mx-auto px-6 md:px-10 lg:px-20 py-16 md:py-24 lg:pb-20"
-      aria-label="XX59 Mark II Headphones Feature"
+      className="max-w-[1440px] mx-auto px-6 md:px-10 py-16 lg:px-20  pt-10 lg:pb-20"
+      aria-label="XX99 Mark II Headphones Feature"
     >
       {/* Main Container - Responsive layout: Image on left, Text on right (default) */}
-      <div className="flex flex-col md:flex-row items-center justify-between gap-12 lg:gap-24">
+      <div className="flex flex-col md:flex-row-reverse items-center justify-between gap-12 lg:gap-24">
         {/* Left Section: Product Image */}
         {/* The image is contained within a rounded, light gray background. */}
         <div className="w-full md:w-1/2 bg-gray-100 rounded-lg flex items-center justify-center p-8 md:p-12 lg:p-20">
           <img
-            src="headphonesimg.png" // Replace with your actual image path
-            alt="XX99 Mark II Headphones"
+            src="speakersimg2.png" // Replace with your actual image path
+            alt="XX99 Mark I Headphones"
             width={540} // Optimized for desktop, object-contain will scale
             height={560} // Adjusted height to match aspect ratio
             className="object-contain w-full h-full max-h-[350px] md:max-h-[450px]"
@@ -29,24 +29,17 @@ const XX99MarkIIFeature = () => {
 
         {/* Right Section: Text Content and Button */}
         <div className="w-full md:w-1/2 flex flex-col items-center md:items-start text-center md:text-left">
-          {/* "NEW PRODUCT" Label */}
-          <p
-            style={{ color: ORANGE_ACCENT }}
-            className="text-sm tracking-[10px] uppercase mb-4"
-          >
-            New Product
-          </p>
-
           {/* Product Title */}
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold uppercase leading-tight mb-6 text-black">
-            XX99 Mark II <br /> HEADPHONES
+            ZX7 <br /> SPEAKER
           </h2>
 
           {/* Product Description */}
           <p className="text-base text-gray-500 max-w-md leading-relaxed mb-8">
-            The new XX99 Mark II headphones is the pinnacle of pristine audio.
-            It redefines your premium headphone experience by reproducing the
-            balanced depth and precision of studio-quality sound.
+            Stream high quality sound wirelessly with minimal loss. The ZX7
+            bookshelf speaker uses high-end audiophile components that
+            represents the top of the line powered speakers for home or studio
+            use.
           </p>
 
           {/* "SEE PRODUCT" Button */}
@@ -63,4 +56,4 @@ const XX99MarkIIFeature = () => {
   );
 };
 
-export default XX99MarkIIFeature;
+export default ZX7Speaker;

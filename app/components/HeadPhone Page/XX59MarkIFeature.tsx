@@ -10,7 +10,7 @@ const XX59MarkIFeature = () => {
   return (
     // Max width container for overall page alignment, centered, with padding
     <section
-      className="max-w-[1440px] mx-auto px-6 md:px-10 lg:px-20 py-10"
+      className="max-w-[1440px] mx-auto px-6 md:px-10 lg:px-20 pt-10 pb-20"
       aria-label="XX99 Mark II Headphones Feature"
     >
       {/* Main Container - Responsive layout: Image on left, Text on right (default) */}
@@ -19,8 +19,8 @@ const XX59MarkIFeature = () => {
         {/* The image is contained within a rounded, light gray background. */}
         <div className="w-full md:w-1/2 bg-gray-100 rounded-lg flex items-center justify-center p-8 md:p-12 lg:p-20">
           <img
-            src="headphonesimg.png" // Replace with your actual image path
-            alt="XX99 Mark II Headphones"
+            src="headphonesimg3.png" // Replace with your actual image path
+            alt="XX59 Mark I Headphones"
             width={540} // Optimized for desktop, object-contain will scale
             height={560} // Adjusted height to match aspect ratio
             className="object-contain w-full h-full max-h-[350px] md:max-h-[450px]"
