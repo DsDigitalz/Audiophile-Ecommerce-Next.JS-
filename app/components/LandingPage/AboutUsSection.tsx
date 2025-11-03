@@ -1,4 +1,5 @@
 // AboutUsSection.tsx
+// import Image from 'next/image';
 import React from 'react';
 
 const AboutUsSection: React.FC = () => {
@@ -36,7 +37,7 @@ const AboutUsSection: React.FC = () => {
         >
           <img
             // Replace with the actual image path
-            src="aboutimg.png" 
+            src="/aboutimg.png" 
             alt="Man listening to headphones in a modern room"
             // Use object-cover to ensure the image fills the rounded container cleanly
             className="w-full h-full object-cover" 
