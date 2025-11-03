@@ -67,8 +67,8 @@ const Header = () => {
 
   // Use the <header> semantic tag for the main container
   return (
-    <header className="sticky top-0 z-50 bg-[#101010]">
-      <div className="container mx-auto px-6 lg:px-20 border-b border-gray-700/50">
+    <header className="sticky top-0 z-50 bg-[#141414]">
+      <div className="max-w-[1440px] mx-auto px-6 lg:px-20 border-b border-gray-700/50">
         <nav
           // Use the <nav> semantic tag for navigation links
           className="flex items-center justify-between h-24"
@@ -121,7 +121,7 @@ const Header = () => {
       {isMenuOpen && (
         <div
           id="mobile-menu"
-          className="lg:hidden absolute top-24 left-0 w-full bg-[#101010]shadow-lg p-6"
+          className="lg:hidden absolute top-24 left-0 w-full bg-[#141414] shadow-lg p-6"
         >
           {/* Use the <ul> and <li> semantic tags for a list of links */}
           <ul className="flex flex-col gap-4">
@@ -130,7 +130,7 @@ const Header = () => {
                 <Link
                   href={link.href}
                   onClick={() => setIsMenuOpen(false)}
-                  className="block text-lg font-medium text-white hover:text-orange-400 py-2 transition-colors"
+                  className="block text-lg font-medium text-white hover:text-[#D87D4A] py-2 transition-colors"
                 >
                   {link.label}
                 </Link>
