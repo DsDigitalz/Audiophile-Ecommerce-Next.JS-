@@ -16,7 +16,7 @@ const CategoryCard = ({ imageSrc, altText, categoryName, href }: CategoryCardPro
     <Link 
       href={href} 
       // The background color is a very light gray (#F1F1F1 is common, using Tailwind's gray-100)
-      className="flex flex-col items-center p-6 pt-20 rounded-lg bg-gray-100 group relative"
+      className="flex flex-col items-center p-6 pt-20 rounded-lg bg-[#F1F1F1] group relative"
       role="region" // Semantic role for the card area
       aria-label={`${categoryName} Category`}
     >
@@ -40,7 +40,7 @@ const CategoryCard = ({ imageSrc, altText, categoryName, href }: CategoryCardPro
       {/* Placeholder Images Removed. The single Image component above handles the visual. */}
 
       {/* Text Content */}
-      <h3 className="text-lg md:text-xl font-bold uppercase mt-12 mb-2 tracking-wide text-gray-800">
+      <h3 className="text-lg md:text-xl font-bold uppercase mt-12 mb-2 tracking-wide text-black">
         {categoryName}
       </h3>
       

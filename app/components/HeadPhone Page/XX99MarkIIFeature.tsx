@@ -17,7 +17,7 @@ const XX99MarkIIFeature = () => {
       <div className="flex flex-col md:flex-row items-center justify-between gap-12 lg:gap-24">
         {/* Left Section: Product Image */}
         {/* The image is contained within a rounded, light gray background. */}
-        <div className="w-full md:w-1/2 bg-gray-100 rounded-lg flex items-center justify-center p-8 md:p-12 lg:p-20">
+        <div className="w-full md:w-1/2 bg-[#F1F1F1] rounded-lg flex items-center justify-center p-8 md:p-12 lg:p-20">
           <img
             src="headphonesimg.png" // Replace with your actual image path
             alt="XX99 Mark II Headphones"
@@ -52,8 +52,8 @@ const XX99MarkIIFeature = () => {
           {/* "SEE PRODUCT" Button */}
           <Link
             href="/product/xx99-mark-ii-headphones" // Example link
-            style={{ backgroundColor: ORANGE_ACCENT }}
-            className="inline-block hover:bg-[#FBAF85] transition-opacity text-white text-sm font-semibold uppercase px-8 py-4 tracking-widest"
+            // style={{ backgroundColor: ORANGE_ACCENT }}
+            className="inline-block bg-[#D87D4A] hover:bg-[#FBAF85] transition-opacity text-white text-sm font-semibold uppercase px-8 py-4 tracking-widest"
           >
             See Product
           </Link>

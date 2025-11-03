@@ -23,7 +23,7 @@ const categoryData = [
   },
 ];
 
-const CategoryCards: React.FC = () => {
+const CategoryCards = () => {
   return (
     // Semantic Markup: Using <section> for this block of related content.
     <section className="pt-30 py-16 md:py-24 lg:pt-40"  aria-label="Product Categories">

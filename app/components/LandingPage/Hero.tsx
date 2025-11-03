@@ -2,7 +2,7 @@ import Link from "next/link";
 import React from "react";
 
 const Hero = () => {
-  const ORANGE_ACCENT = "#D87D4A";
+//   const ORANGE_ACCENT = "#D87D4A";
 
   return (
     <section
@@ -41,8 +41,8 @@ const Hero = () => {
 
         <Link
           href="/headphones/xx99-mark-ii"
-          style={{ backgroundColor: ORANGE_ACCENT }}
-          className="inline-block hover:bg-[#FBAF85] transition-opacity text-white text-sm font-semibold uppercase px-8 py-4 tracking-widest"
+        //   style={{ backgroundColor: ORANGE_ACCENT }}
+          className="inline-block bg-[#D87D4A] hover:bg-[#FBAF85] transition-opacity text-white text-sm font-semibold uppercase px-8 py-4 tracking-widest"
         >
           See Product
         </Link>
