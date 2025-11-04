@@ -21,7 +21,7 @@ const products = [
   // I am omitting the data here for brevity, but assume the full array from your input is used.
   {
     id: "yx1",
-    name: "YX1",
+    name: "YX1 WIRELESS EARPHONES",
     category: "EARPHONES",
     price: 599,
     description:
@@ -138,17 +138,17 @@ const EarPhonePage = async ({ params }: EarPhonePageProps) => {
     {
       name: "XX99 MARK I",
       imageSrc: "/categoryimg1.png", // Placeholder image
-      href: "/headphones/xx99-mark-one-headphones", // Example link
+      href: "/headphones/xx99-mark-i", // Example link
     },
     {
       name: "XX59",
       imageSrc: "/XX59img.png", // Placeholder image
-      href: "/headphones/xx59-headphones", // Example link
+      href: "/headphones/xx59-mark-i", // Example link
     },
     {
       name: "ZX9 SPEAKER",
       imageSrc: "/speakersimg1.png", // Placeholder image
-      href: "/speakers/zx9-speaker", // Example link
+      href: "/speakers/zx9", // Example link
     },
   ];
 

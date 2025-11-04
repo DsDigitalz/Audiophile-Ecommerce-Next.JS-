@@ -1,4 +1,5 @@
 // YX1EarphonesAd.tsx
+import Link from 'next/link';
 import React from 'react';
 
 const YX1EarphonesAd = () => {
@@ -34,14 +35,14 @@ const YX1EarphonesAd = () => {
           </h2>
           
           {/* Action Button */}
-          <button
+          <Link href="/earphones/yx1"
             // Pixel-perfect button styling: thin black border, transparent background
             className="border border-black text-black text-sm uppercase px-8 py-3 tracking-widest bg-transparent hover:bg-black hover:text-white transition-colors duration-300"
             // Semantic Markup: using 'button'
             role="button"
           >
             SEE PRODUCT
-          </button>
+          </Link>
         </div>
 
       </div>

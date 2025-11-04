@@ -161,17 +161,17 @@ const SpeakersPage = async ({ params }: SpeakersPageProps) => {
     {
       name: "ZX9 Speaker",
       imageSrc: "/speakersimg1.png", // Placeholder image
-      href: "/speakers/xx99-mark-one-headphones", // Example link
+      href: "/speakers/zx9", // Example link
     },
     {
       name: "XX99 MARK I",
       imageSrc: "/XX99MarkIimg.png", // Placeholder image
-      href: "/headphones/xx59-headphones", // Example link
+      href: "/headphones/xx99-mark-i", // Example link
     },
     {
       name: "XX59",
-      imageSrc: "/categoryimg3.png", // Placeholder image
-      href: "/speakers/zx9-speaker", // Example link
+      imageSrc: "/XX59img.png", // Placeholder image
+      href: "/headphones/xx59-mark-i", // Example link
     },
   ];
 

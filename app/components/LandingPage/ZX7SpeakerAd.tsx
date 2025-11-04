@@ -1,3 +1,4 @@
+import Link from "next/link";
 import React from "react";
 
 const ZX7SpeakerAd = () => {
@@ -14,9 +15,9 @@ const ZX7SpeakerAd = () => {
           <h2 className="text-3xl sm:text-4xl font-bold tracking-wider mb-3 md:mb-8 uppercase text-black">
             ZX7 SPEAKER
           </h2>
-          <button className="border-2 border-black text-black text-sm uppercase px-8 py-3 tracking-widest hover:bg-black hover:text-white transition-colors duration-300">
+          <Link href="/speakers/zx7" className="border-2 border-black text-black text-sm uppercase px-8 py-3 tracking-widest hover:bg-black hover:text-white transition-colors duration-300 cursor-pointer">
             See Product
-          </button>
+          </Link>
         </div>
 
         {/* Optional subtle overlay to darken or tint */}

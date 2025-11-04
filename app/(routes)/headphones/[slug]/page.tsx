@@ -21,7 +21,7 @@ const products = [
   // I am omitting the data here for brevity, but assume the full array from your input is used.
   {
     id: "xx99-mark-ii",
-    name: "XX99 MARK II",
+    name: "XX99 MARK II HEADPHONES",
     category: "HEADPHONES",
     price: 2999,
     description:
@@ -44,7 +44,7 @@ const products = [
   },
   {
     id: "xx99-mark-i",
-    name: "XX99 MARK I",
+    name: "XX99 MARK I HEADPHONES",
     category: "HEADPHONES",
     price: 1750,
     description:
@@ -66,7 +66,7 @@ const products = [
   },
   {
     id: "xx59-mark-i",
-    name: "XX59",
+    name: "XX59 HEADPHONES",
     category: "HEADPHONES",
     price: 899,
     description:
@@ -163,7 +163,7 @@ const HeadPhonePage = async ({ params }: HeadPhonePageProps) => {
         </div>
 
         {/* Product Name */}
-        <h3 className="text-lg md:text-xl font-bold uppercase mb-8 text-black">
+        <h3 className="text-lg md:text-xl font-bold uppercase mb-8 text-black ">
           {name}
         </h3>
 
@@ -181,19 +181,19 @@ const HeadPhonePage = async ({ params }: HeadPhonePageProps) => {
 
   const suggestedProducts = [
     {
-      name: "XX99 MARK I",
-      imageSrc: "/categoryimg1.png", // Placeholder image
-      href: "/headphones/xx99-mark-one-headphones", // Example link
+      name: "XX99 MARK II",
+      imageSrc: "/headphonesimg.png", // Placeholder image
+      href: "/headphones/xx99-mark-ii", // Example link
     },
     {
-      name: "XX59",
-      imageSrc: "/categoryimg2.png", // Placeholder image
-      href: "/headphones/xx59-headphones", // Example link
+      name: "XX99 MARK I",
+      imageSrc: "/headphonesimg2.png", // Placeholder image
+      href: "/headphones/xx99-mark-i", // Example link
     },
     {
       name: "ZX9 SPEAKER",
-      imageSrc: "/categoryimg3.png", // Placeholder image
-      href: "/speakers/zx9-speaker", // Example link
+      imageSrc: "/speakersimg1.png", // Placeholder image
+      href: "/speakers/zx9", // Example link
     },
   ];
 
@@ -243,7 +243,7 @@ const HeadPhonePage = async ({ params }: HeadPhonePageProps) => {
           )}
 
           {/* Product Title - Correct font size and tight leading match the screenshot */}
-          <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold uppercase leading-tight mb-6 text-black">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold uppercase leading-tight mb-6 text-black w-80">
             {product.name}
           </h1>
 
