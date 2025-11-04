@@ -51,7 +51,7 @@ const XX99MarkIIFeature = () => {
 
           {/* "SEE PRODUCT" Button */}
           <Link
-            href="headphones/xx99-mark-ii-headphones" // Example link
+            href="headphones/xx99-mark-ii" // Example link
             // style={{ backgroundColor: ORANGE_ACCENT }}
             className="inline-block bg-[#D87D4A] hover:bg-[#FBAF85] transition-opacity text-white text-sm font-semibold uppercase px-8 py-4 tracking-widest"
           >

@@ -48,7 +48,7 @@ const SuggestedProductCard: React.FC<SuggestedProductProps> = ({
   );
 };
 
-const XX99MarkIILikes = () => {
+const XX99MarkILikes = () => {
   // Data for suggested products (replace with actual data from your backend)
   const suggestedProducts = [
     {
@@ -76,7 +76,7 @@ const XX99MarkIILikes = () => {
     >
       <h2 className="text-center text-3xl sm:text-4xl font-bold uppercase mb-12 md:mb-16 text-black">
         YOU MAY ALSO LIKE
-      </h2> 
+      </h2>
 
       {/* Grid for suggested products (3 columns on desktop, 1 on mobile) */}
       <div className="grid grid-cols-1 md:grid-cols-3 gap-y-16 md:gap-x-4 lg:gap-x-8">
@@ -88,4 +88,4 @@ const XX99MarkIILikes = () => {
   );
 };
 
-export default XX99MarkIILikes;
+export default XX99MarkILikes;
