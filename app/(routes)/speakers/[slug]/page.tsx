@@ -20,27 +20,50 @@ const products = [
   // ... (Your complete products array remains the same for functionality)
   // I am omitting the data here for brevity, but assume the full array from your input is used.
   {
-    id: "yx1",
-    name: "YX1",
-    category: "EARPHONES",
-    price: 599,
+    id: "zx9",
+    name: "ZX9 SPEAKER",
+    category: "SPEAKERS",
+    price: 4500,
     description:
-      "Tailor your listening experience with bespoke dynamic drivers from the new YX1 Wireless Earphones. Enjoy incredible high-fidelity sound even in noisy environments with its active noise cancellation feature.",
+      "Upgrade your sound system with the all new ZX9 active speaker. It’s a bookshelf speaker system that offers truly wireless connectivity -- creating new possibilities for more pleasing and practical audio setups..",
     features:
-      "Experience unrivalled stereo sound thanks to innovative acoustic technology. With improved ergonomics designed for full day wearing, these revolutionary earphones have been finely crafted to provide you with the perfect fit, delivering complete comfort all day long while enjoying exceptional noise isolation and truly immersive sound.",
+      "Connect via Bluetooth or nearly any wired source. This speaker features optical, digital coaxial, USB Type-B, stereo RCA, and stereo XLR inputs, allowing you to have up to five wired source devices connected for easy switching. Improved bluetooth technology offers near lossless audio quality at up to 328ft (100m).",
     secondaryFeatures:
-      "The YX1 Wireless Earphones features customizable controls for volume, music, calls, and voice assistants built into both earbuds. The new 7-hour battery life can be extended up to 28 hours with the charging case, giving you uninterrupted play time. Exquisite craftsmanship with a splash resistant design now available in an all new white and grey color scheme as well as the popular classic black.",
+      "Discover clear, more natural sounding highs than the competition with ZX9’s signature planar diaphragm tweeter. Equally important is its powerful room-shaking bass courtesy of a 6.5” aluminum alloy bass unit. You’ll be able to enjoy equal sound quality whether in a large room or small den. Furthermore, you will experience new sensations from old songs since it can respond to even the subtle waveforms.",
     inTheBox: [
-      { quantity: 2, item: "Earphone Unit" },
-      { quantity: 6, item: "Multi-size Earplugs" },
+      { quantity: 2, item: "Speaker Unit" },
+      { quantity: 2, item: "Speaker Cloth Panel" },
       { quantity: 1, item: "User Manual" },
-      { quantity: 1, item: "USB-C Charging Cable" },
-      { quantity: 1, item: "Travel Pouch" },
+      { quantity: 1, item: "3.5mm 5m Audio Cable" },
+      { quantity: 1, item: "10m Optical Cable" },
     ],
-    imageSrc: "/earphoneimg.png",
-    altText: "YX1 Earphones product view",
+    imageSrc: "/speakersimg1.png",
+    altText: "ZX9 Speaker product view",
     color: "black",
     newProduct: true,
+  },
+  {
+    id: "zx7",
+    name: "ZX7 SPEAKER",
+    category: "SPEAKERS",
+    price: 3500,
+    description:
+      "Reap the advantages of a flat diaphragm tweeter cone. This provides a fast response rate and excellent high frequencies that lower tiered bookshelf speakers cannot provide. The woofers are made from aluminum that produces a unique and clear sound. XLR inputs allow you to connect to a mixer for more advanced usage. ",
+    features:
+      "The ZX7 speaker is the perfect blend of stylish design and high performance. It houses an encased MDF wooden enclosure which minimises acoustic resonance. Dual connectivity allows pairing through bluetooth or traditional optical and RCA input. Switch input sources and control volume at your finger tips with the included wireless remote. This versatile speaker is equipped to deliver an authentic listening experience.",
+    secondaryFeatures:
+      "From the handcrafted microfiber ear cushions to the robust metal headband with inner damping element, the components work together to deliver comfort and uncompromising sound. Its closed-back design delivers up to 27 dB of passive noise cancellation, reducing resonance by reflecting sound to a dedicated absorber. For connectivity, a specially tuned cable is included with a balanced gold connector..",
+    inTheBox: [
+      { quantity: 2, item: "Speaker Unit" },
+      { quantity: 2, item: "Speaker Cloth Panel" },
+      { quantity: 1, item: "User Manual" },
+      { quantity: 1, item: "3.5mm 7.5m Audio Cable" },
+      { quantity: 1, item: "7.5m Optical Cable" },
+    ],
+    imageSrc: "/ZX7img.png",
+    altText: "ZX7 Speaker product view",
+    color: "black-gold",
+    newProduct: false,
   },
 ];
 
@@ -54,13 +77,13 @@ const relatedProducts = [
 ];
 // --- END MOCK DATA ---
 
-interface EarPhonePageProps {
+interface SpeakersPageProps {
   params: {
     slug: string;
   };
 }
 
-const EarPhonePage = async ({ params }: EarPhonePageProps) => {
+const SpeakersPage = async ({ params }: SpeakersPageProps) => {
   const { slug } = await params;
 
   const product = products.find((p) => p.id === slug);
@@ -80,9 +103,9 @@ const EarPhonePage = async ({ params }: EarPhonePageProps) => {
   // GALLERY
 
   const galleryImages = {
-    image1: "/YX1gallery1.png", // Top-left small image
-    image2: "/YX1gallery2.png", // Bottom-left small image
-    image3: "/YX1gallery3.png", // Right large image
+    image1: "/ZX9gallery1.png", // Top-left small image
+    image2: "/ZX9gallery2.png", // Bottom-left small image
+    image3: "/ZX9gallery3.png", // Right large image
   };
 
   // LIkES
@@ -118,7 +141,7 @@ const EarPhonePage = async ({ params }: EarPhonePageProps) => {
         </div>
 
         {/* Product Name */}
-        <h3 className="text-lg md:text-xl font-bold uppercase mb-8 text-black">
+        <h3 className="text-lg md:text-xl font-bold uppercase mb-8 text-black ">
           {name}
         </h3>
 
@@ -136,18 +159,18 @@ const EarPhonePage = async ({ params }: EarPhonePageProps) => {
 
   const suggestedProducts = [
     {
-      name: "XX99 MARK I",
-      imageSrc: "/categoryimg1.png", // Placeholder image
-      href: "/headphones/xx99-mark-one-headphones", // Example link
+      name: "ZX9 Speaker",
+      imageSrc: "/speakersimg1.png", // Placeholder image
+      href: "/speakers/xx99-mark-one-headphones", // Example link
     },
     {
-      name: "XX59",
-      imageSrc: "/XX59img.png", // Placeholder image
+      name: "XX99 MARK I",
+      imageSrc: "/XX99MarkIimg.png", // Placeholder image
       href: "/headphones/xx59-headphones", // Example link
     },
     {
-      name: "ZX9 SPEAKER",
-      imageSrc: "/speakersimg1.png", // Placeholder image
+      name: "XX59",
+      imageSrc: "/categoryimg3.png", // Placeholder image
       href: "/speakers/zx9-speaker", // Example link
     },
   ];
@@ -198,7 +221,7 @@ const EarPhonePage = async ({ params }: EarPhonePageProps) => {
           )}
 
           {/* Product Title - Correct font size and tight leading match the screenshot */}
-          <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold uppercase leading-tight mb-6 text-black">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold uppercase leading-tight mb-6 text-black w-1 ">
             {product.name}
           </h1>
 
@@ -329,7 +352,7 @@ const EarPhonePage = async ({ params }: EarPhonePageProps) => {
 
       {/* --- YOU MAY ALSO LIKE --- */}
       <section
-        className="max-w-[1440px] mx-auto  py-16 md:py-24"
+        className="max-w-[1440px] mx-auto "
         aria-label="You May Also Like"
       >
         <h2 className="text-center text-3xl sm:text-4xl font-bold uppercase mb-12 md:mb-16 text-black">
@@ -349,4 +372,4 @@ const EarPhonePage = async ({ params }: EarPhonePageProps) => {
   );
 };
 
-export default EarPhonePage;
+export default SpeakersPage;

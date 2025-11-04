@@ -4,6 +4,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
 // Removed: import { motion } from 'framer-motion';
 
 // --- Icon components (Simplified for example) ---
@@ -90,7 +91,7 @@ const Header = () => {
             className="text-2xl font-bold text-white tracking-widest uppercase mr-auto lg:mr-0"
           >
             {/* Using a <strong> tag for semantic logo emphasis */}
-           <img src="logo.svg" alt="" />
+            <Image src="/logo.svg" alt="" width={150} height={25} />
           </Link>
 
           {/* Desktop Navigation Links */}

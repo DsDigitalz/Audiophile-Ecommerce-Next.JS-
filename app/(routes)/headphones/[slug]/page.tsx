@@ -34,7 +34,7 @@ const products = [
       { quantity: 1, item: "Headphone Unit" },
       { quantity: 2, item: "Replacement Earcups" },
       { quantity: 1, item: "User Manual" },
-      { quantity: 1, item: "3.5mm Audio Cable" },
+      { quantity: 1, item: "3.5mm 5m Audio Cable" },
       { quantity: 1, item: "Travel Bag" },
     ],
     imageSrc: "/headphonesimg.png",
@@ -47,16 +47,20 @@ const products = [
     name: "XX99 MARK I",
     category: "HEADPHONES",
     price: 1750,
-    description: "...",
-    features: "...",
-    secondaryFeatures: "...",
+    description:
+      "As the gold standard for headphones, the classic XX99 Mark I offers detailed and accurate audio reproduction for audiophiles, mixing engineers, and music aficionados alike in studios and on the go. ",
+    features:
+      "As the headphones all others are measured against, the XX99 Mark I demonstrates over five decades of audio expertise, redefining the critical listening experience. This pair of closed-back headphones are made of industrial, aerospace-grade materials to emphasize durability at a relatively light weight of 11 oz..",
+    secondaryFeatures:
+      "From the handcrafted microfiber ear cushions to the robust metal headband with inner damping element, the components work together to deliver comfort and uncompromising sound. Its closed-back design delivers up to 27 dB of passive noise cancellation, reducing resonance by reflecting sound to a dedicated absorber. For connectivity, a specially tuned cable is included with a balanced gold connector..",
     inTheBox: [
       { quantity: 1, item: "Headphone Unit" },
       { quantity: 2, item: "Replacement Earcups" },
       { quantity: 1, item: "User Manual" },
-      { quantity: 1, item: "3.5mm Audio Cable" },
+      { quantity: 1, item: "3.5mm 5m Audio Cable" },
     ],
-    imageSrc: "/xx99-mark-i.jpg",
+    imageSrc: "/XX99MarkIimg.png",
+    altText: "XX99 Mark I Headphones product view",
     color: "black-gold",
     newProduct: false,
   },
@@ -65,16 +69,21 @@ const products = [
     name: "XX59",
     category: "HEADPHONES",
     price: 899,
-    description: "...",
-    features: "...",
-    secondaryFeatures: "...",
+    description:
+      "Enjoy your audio almost anywhere and customize it to your specific tastes with the XX59 headphones. The stylish yet durable versatile wireless headset is a brilliant companion at home or on the move.  ",
+    features:
+      "These headphones have been created from durable, high-quality materials tough enough to take anywhere. Its compact folding design fuses comfort and minimalist style making it perfect for travel. Flawless transmission is assured by the latest wireless technology engineered for audio synchronization with videos.",
+    secondaryFeatures:
+      "More than a simple pair of headphones, this headset features a pair of built-in microphones for clear, hands-free calling when paired with a compatible smartphone. Controlling music and calls is also intuitive thanks to easy-access touch buttons on the earcups. Regardless of how you use the XX59 headphones, you can do so all day thanks to an impressive 30-hour battery life that can be rapidly recharged via USB-C.",
     inTheBox: [
       { quantity: 1, item: "Headphone Unit" },
+      { quantity: 2, item: "Replacement Earcups" },
       { quantity: 1, item: "User Manual" },
-      { quantity: 1, item: "Charging Cable" },
+      { quantity: 1, item: "3.5mm 5m Audio Cable" },
     ],
-    imageSrc: "/xx59.jpg",
-    altText: "",
+
+    imageSrc: "/XX59img.png",
+    altText: " XX59 Headphones product view",
     color: "gray",
     newProduct: false,
   },
@@ -111,14 +120,14 @@ const HeadPhonePage = async ({ params }: HeadPhonePageProps) => {
 
   const index = products.findIndex((p) => p.id === slug);
   const isImageRight = index % 2 !== 0;
-  const flexOrderClasses = isImageRight ? "md:flex-row-reverse" : "md:flex-row";
+  const flexOrderClasses = isImageRight ? "md:flex-row" : "md:flex-row";
 
   // GALLERY
 
   const galleryImages = {
-    image1: "/XX99MarkIIgallery1.png", // Top-left small image
-    image2: "/XX99MarkIIgallery2.png", // Bottom-left small image
-    image3: "/XX99MarkIIgallery3.png", // Right large image
+    image1: "/XX59gallery1.png", // Top-left small image
+    image2: "/XX59gallery2.png", // Bottom-left small image
+    image3: "/XX59gallery3.png", // Right large image
   };
 
   // LIkES
@@ -365,7 +374,7 @@ const HeadPhonePage = async ({ params }: HeadPhonePageProps) => {
 
       {/* --- YOU MAY ALSO LIKE --- */}
       <section
-        className="max-w-7xl mx-auto px-6 md:px-10 lg:px-20 py-16 md:py-24"
+        className="max-w-[1440px] mx-auto   py-16 md:py-24"
         aria-label="You May Also Like"
       >
         <h2 className="text-center text-3xl sm:text-4xl font-bold uppercase mb-12 md:mb-16 text-black">

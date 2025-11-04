@@ -1,4 +1,5 @@
 // Footer.tsx
+import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 // Framer Motion imports have been removed.
@@ -51,7 +52,7 @@ const Footer: React.FC = () => {
               className="text-2xl font-bold text-white tracking-widest mb-10 mr-auto lg:mr-0"
             >
               {/* Using a <strong> tag for semantic logo emphasis */}
-              <img src="logo.svg" alt="" />
+              <Image src="/logo.svg" alt="" width={150} height={25} />
             </Link>
 
             {/* Navigation (Positioned visually top-right in original design) */}
