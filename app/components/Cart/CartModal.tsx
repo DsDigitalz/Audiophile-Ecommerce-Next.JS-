@@ -7,18 +7,16 @@ import Link from "next/link";
 import Image from "next/image";
 import { useCartStore } from "@/lib/store/cartStore";
 import { motion, AnimatePresence } from "framer-motion";
-// FIX: Import useShallow for shallow comparison in the selector
 import { useShallow } from "zustand/react/shallow";
 
 /**
  * CartModal Component
  */
 export default function CartModal() {
-  // FIX: Wrap the selector function with useShallow to prevent infinite loop
+  // FIX: Use useShallow() to prevent infinite loop/hydration error
   const { items, total, isOpen, closeModal, updateQuantity, clearCart } =
     useCartStore(
       useShallow((state) => ({
-        // <-- FIX APPLIED HERE
         items: state.items,
         total: state.total,
         isOpen: state.isOpen,
@@ -59,13 +57,18 @@ export default function CartModal() {
       opacity: 1,
       y: 0,
       transition: {
-        type: "spring",
-        stiffness: 100,
+        // FIX: Remove duration and enforce 'spring' type using 'as const'
+        // to satisfy Framer Motion's strict TypeScript definition for Variants.
+        type: "spring" as const,
+        stiffness: 260,
         damping: 20,
-        duration: 0.3,
       },
     },
-    exit: { opacity: 0, y: -20, transition: { duration: 0.2 } },
+    exit: {
+      opacity: 0,
+      y: -20,
+      transition: { duration: 0.2 },
+    },
   };
 
   return createPortal(
@@ -78,16 +81,16 @@ export default function CartModal() {
           role="dialog"
           aria-modal="true"
           aria-labelledby="cart-title"
-          initial={{ opacity: 0 }} // Fade in overlay
+          initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
         >
           {/* Modal Content Container (Animated) */}
-          <motion.section // <-- Semantic Markup: Use <section> for the modal content
+          <motion.section
             className="w-full max-w-[377px] h-fit bg-white rounded-lg p-7 md:p-8 shadow-2xl relative"
             onClick={(e) => e.stopPropagation()}
             role="document"
-            variants={modalContentVariants} // Apply slide/fade animation
+            variants={modalContentVariants} // Applied Fix
             initial="hidden"
             animate="visible"
             exit="exit"
@@ -119,7 +122,7 @@ export default function CartModal() {
                 </p>
               ) : (
                 safeItems.map((item) => (
-                  <article // <-- Semantic Markup: Use <article> for each cart item
+                  <article
                     key={item.id}
                     className="flex justify-between items-center"
                     role="listitem"
@@ -187,7 +190,7 @@ export default function CartModal() {
 
               <Link href="/checkout" passHref legacyBehavior>
                 <button
-                  onClick={closeModal} // Close modal on navigation
+                  onClick={closeModal}
                   disabled={safeItems.length === 0}
                   className={`${ORANGE_ACCENT_BG} w-full text-white text-[13px] font-semibold uppercase px-6 py-3 tracking-widest hover:opacity-75 transition-opacity disabled:opacity-50 disabled:cursor-not-allowed`}
                   role="link"
