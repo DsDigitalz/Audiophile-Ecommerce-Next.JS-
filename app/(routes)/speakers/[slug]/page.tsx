@@ -79,10 +79,9 @@ const relatedProducts = [
 ];
 // --- END MOCK DATA ---
 interface SpeakersPageProps {
-  params: {
-    slug: string;
-  };
+  params: Promise<{ slug: string }>; // ✅ Promise type for Next 16
 }
+
 
 const SpeakersPage = ({ params }: SpeakersPageProps) => {
   const { slug } = React.use(params) as { slug: string };
