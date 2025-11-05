@@ -147,7 +147,7 @@ export default function CheckoutPage() {
         {/* Go Back Link */}
         <div className="mb-6 md:mb-8">
           <Link
-            href="headphones/xx99-mark-ii"
+            href=""
             className="text-gray-500 hover:text-gray-900 transition-colors text-[15px] font-medium"
           >
             Go Back
@@ -161,7 +161,7 @@ export default function CheckoutPage() {
             e.preventDefault();
             // In a real app, form data validation and submission logic goes here.
             // For now, we assume success and trigger the Thank You modal (Next step)
-            alert("Payment Success - Proceed to Thank You Modal");
+            // alert("Payment Success - Proceed to Thank You Modal");
           }}
         >
           {/* LEFT SIDE: FORM DETAILS */}
@@ -330,7 +330,7 @@ export default function CheckoutPage() {
                 {/* Cash on Delivery Info Block (Placeholder for the gray block in the design) */}
                 {paymentMethod === "cashOnDelivery" && (
                   <div className="md:col-span-2 flex items-start gap-4 mt-4">
-                    <Image
+                    <Image 
                       src="/assets/shared/icon-cash-on-delivery.svg"
                       alt="Cash on Delivery"
                       width={48}
@@ -350,6 +350,10 @@ export default function CheckoutPage() {
           {/* RIGHT SIDE: ORDER SUMMARY */}
           <OrderSummary />
         </form>
+
+
+
+        
       </div>
     </main>
   );

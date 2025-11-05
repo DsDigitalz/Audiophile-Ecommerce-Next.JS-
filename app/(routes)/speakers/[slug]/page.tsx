@@ -1,8 +1,10 @@
-import React from "react";
+"use client";
+
+import React, { useState, use } from "react";
 import Link from "next/link";
 import { ChevronLeft } from "lucide-react";
-import { notFound } from "next/navigation";
-
+import { notFound, useParams } from "next/navigation";
+import { useCartStore } from "@/lib/store/cartStore";
 // --- UI CONSTANTS ---
 const ORANGE_ACCENT = "#D87D4A";
 const LIGHT_GRAY_BG = "#F1F1F1";
@@ -76,21 +78,39 @@ const relatedProducts = [
   { id: "yx1-earphones", name: "YX1 EARPHONES", image: "/yx1.jpg" },
 ];
 // --- END MOCK DATA ---
-
 interface SpeakersPageProps {
   params: {
     slug: string;
   };
 }
 
-const SpeakersPage = async ({ params }: SpeakersPageProps) => {
-  const { slug } = await params;
+// ❌ remove `async` — Client Components cannot be async
+const SpeakersPage = ({ params }: SpeakersPageProps) => {
+  const resolvedParams = use(params);
+  const { slug } = resolvedParams;
 
   const product = products.find((p) => p.id === slug);
 
   if (!product) {
     return notFound();
   }
+
+  const [quantity, setQuantity] = useState(1);
+  const { addItem, openModal } = useCartStore();
+
+  const handleAddToCart = () => {
+    addItem(
+      {
+        id: product.id,
+        name: product.name,
+        price: product.price,
+        image: product.imageSrc,
+      },
+      quantity
+    );
+    openModal();
+    setQuantity(1);
+  };
 
   const otherProducts = relatedProducts
     .filter((p) => p.id !== slug)
@@ -180,7 +200,7 @@ const SpeakersPage = async ({ params }: SpeakersPageProps) => {
       {/* 1. Go Back Link */}
       <div className="mb-6 md:mb-8">
         <Link
-          href="/headphones"
+          href="/headphones/zx9"
           className="text-gray-500 hover:text-gray-900 transition-colors text-base"
         >
           Go Back
@@ -237,16 +257,18 @@ const SpeakersPage = async ({ params }: SpeakersPageProps) => {
 
           {/* Add to Cart Controls (Quantity + Button) */}
           <div className="flex items-center space-x-4">
-            {/* Quantity Selector (Styled for pixel-perfection) */}
+            {/* Quantity Selector */}
             <div className="flex items-center bg-gray-100 rounded-none text-black font-bold">
               <button
+                onClick={() => setQuantity((q) => Math.max(1, q - 1))}
                 aria-label="Decrease quantity"
                 className="p-3 w-10 text-xl text-gray-500 hover:text-black transition-colors"
               >
                 -
               </button>
-              <span className="p-3 w-10 text-center text-sm">1</span>
+              <span className="p-3 w-10 text-center text-sm">{quantity}</span>
               <button
+                onClick={() => setQuantity((q) => q + 1)}
                 aria-label="Increase quantity"
                 className="p-3 w-10 text-xl text-gray-500 hover:text-black transition-colors"
               >
@@ -254,8 +276,9 @@ const SpeakersPage = async ({ params }: SpeakersPageProps) => {
               </button>
             </div>
 
-            {/* ADD TO CART Button */}
+            {/* ADD TO CART Button - Wires up the handler */}
             <button
+              onClick={handleAddToCart}
               style={{ backgroundColor: ORANGE_ACCENT }}
               className="text-white text-sm font-semibold uppercase px-8 py-3 tracking-widest hover:opacity-75 transition-opacity cursor-pointer"
               role="button"

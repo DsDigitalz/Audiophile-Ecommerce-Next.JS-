@@ -58,7 +58,7 @@ const products = [
     newProduct: false,
   },
   {
-    id: "xx59",
+    id: "xx59-mark-i",
     name: "XX59 HEADPHONES",
     category: "HEADPHONES",
     price: 899,
@@ -180,7 +180,7 @@ const HeadPhonePage = () => {
   // --- UI/Layout Variables ---
   const index = products.findIndex((p) => p.id === slug);
   const isImageRight = index % 2 !== 0;
-  const flexOrderClasses = isImageRight ? "md:flex-row-reverse" : "md:flex-row";
+  const flexOrderClasses = isImageRight ?  "md:flex-row" : "md:flex-row";
 
   const galleryImages = {
     image1: "/XX59gallery1.png",
