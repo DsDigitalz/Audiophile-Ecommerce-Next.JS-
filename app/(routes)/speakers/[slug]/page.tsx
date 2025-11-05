@@ -85,7 +85,7 @@ interface SpeakersPageProps {
 }
 
 const SpeakersPage = ({ params }: SpeakersPageProps) => {
-  const { slug } = React.use(params);
+  const { slug } = React.use(params) as { slug: string };
 
   const product = products.find((p) => p.id === slug);
   if (!product) return notFound();
