@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState, use } from "react";
+import React, { useState } from "react";
 import Link from "next/link";
 import { ChevronLeft } from "lucide-react";
 import { notFound, useParams } from "next/navigation";
@@ -84,16 +84,11 @@ interface SpeakersPageProps {
   };
 }
 
-// ❌ remove `async` — Client Components cannot be async
 const SpeakersPage = ({ params }: SpeakersPageProps) => {
-  const resolvedParams = use(params);
-  const { slug } = resolvedParams;
+  const { slug } = React.use(params);
 
   const product = products.find((p) => p.id === slug);
-
-  if (!product) {
-    return notFound();
-  }
+  if (!product) return notFound();
 
   const [quantity, setQuantity] = useState(1);
   const { addItem, openModal } = useCartStore();
