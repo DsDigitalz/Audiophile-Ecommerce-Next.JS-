@@ -26,9 +26,12 @@ const categoryData = [
 const CategoryCards = () => {
   return (
     // Semantic Markup: Using <section> for this block of related content.
-    <section className="pt-30 py-16 md:py-24 lg:pt-40"  aria-label="Product Categories">
+    <section
+      className=" max-w-[1440px] mx-auto px-6 md:px-10 lg:px-20 py-30 md:py-40 lg:pb-20"
+      aria-label="Product Categories"
+    >
       <div
-        className="max-w-[1440px] mx-auto 
+        className=" mx-auto 
                    grid grid-cols-1 md:grid-cols-3 gap-16 md:gap-4 lg:gap-8"
       >
         {categoryData.map((category) => (

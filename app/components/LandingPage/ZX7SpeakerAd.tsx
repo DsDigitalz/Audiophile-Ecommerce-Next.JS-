@@ -3,7 +3,7 @@ import React from "react";
 
 const ZX7SpeakerAd = () => {
   return (
-    <section className="max-w-[1440px] mx-auto px-6 md:px-10 lg:px-20  md:pt-10">
+    <section className="max-w-[1440px] mx-auto px-6 md:px-10 lg:px-20 ">
       <div
         className="relative rounded-lg overflow-hidden  md:bg-contain md:bg-no-repeat md:bg-center h-[327px] md:h-[400px] lg:h-[500px] flex items-center"
         style={{

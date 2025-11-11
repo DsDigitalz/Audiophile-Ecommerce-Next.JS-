@@ -7,7 +7,7 @@ import { notFound, useParams } from "next/navigation";
 import { useCartStore } from "@/lib/store/cartStore";
 import AboutUsSection from "@/app/components/LandingPage/AboutUsSection";
 import CategoryCards from "@/app/components/LandingPage/CategoryCards";
-import { QuantityControl } from "@/app/components/QuantityControl";
+// import { QuantityControl } from "@/app/components/QuantityControl";
 
 const ORANGE_ACCENT = "#D87D4A";
 const LIGHT_GRAY_BG = "#F1F1F1";
@@ -75,7 +75,7 @@ const SuggestedProductCard: React.FC<SuggestedProductProps> = ({
           alt={name}
           width={220}
           height={220}
-          className="object-contain w-full h-full max-h-[120px] md:max-h-[160px] lg:max-h-[200px]"
+          className="object-contain w-full h-full max-h-[120px] md:max-h-40 lg:max-h-[200px]"
         />
       </div>
       <h3 className="text-lg md:text-xl font-bold uppercase mb-8 text-black">

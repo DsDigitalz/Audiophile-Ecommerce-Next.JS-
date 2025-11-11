@@ -2,16 +2,16 @@
 
 import React, { useState } from "react";
 import Link from "next/link";
-import { ChevronLeft } from "lucide-react";
-import { notFound, useParams } from "next/navigation";
+// import { ChevronLeft } from "lucide-react";
+import { notFound } from "next/navigation";
 import { useCartStore } from "@/lib/store/cartStore";
 // --- UI CONSTANTS ---
-const ORANGE_ACCENT = "#D87D4A";
+// const ORANGE_ACCENT = "#D87D4A";
 const LIGHT_GRAY_BG = "#F1F1F1";
 
 // --- CLIENT COMPONENT PLACEHOLDER ---
 // Ensure you have this file: /app/components/QuantityControl.tsx
-import { QuantityControl } from "@/app/components/QuantityControl";
+// import { QuantityControl } from "@/app/components/QuantityControl";
 import Image from "next/image";
 import AboutUsSection from "@/app/components/LandingPage/AboutUsSection";
 import CategoryCards from "@/app/components/LandingPage/CategoryCards";
@@ -150,7 +150,7 @@ const SpeakersPage = ({ params }: SpeakersPageProps) => {
             alt={name}
             width={220} // Generous width for object-contain to scale
             height={220} // Generous height
-            className="object-contain w-full h-full max-h-[120px] md:max-h-[160px] lg:max-h-[200px]"
+            className="object-contain w-full h-full max-h-[120px]  lg:max-h-[200px]"
           />
         </div>
 

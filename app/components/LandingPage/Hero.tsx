@@ -49,7 +49,7 @@ const Hero = () => {
       </div>
 
       {/* Top Line */}
-      <div className="absolute top-0 left-0 right-0 h-[1px] bg-white/10 z-30" />
+      <div className="absolute top-0 left-0 right-0 bg-white/10 z-30" />
     </section>
   );
 };

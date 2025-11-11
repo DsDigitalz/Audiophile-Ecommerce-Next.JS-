@@ -27,7 +27,7 @@ const SuggestedProductCard: React.FC<SuggestedProductProps> = ({
           alt={name}
           width={220} // Generous width for object-contain to scale
           height={220} // Generous height
-          className="object-contain w-full h-full max-h-[120px] md:max-h-[160px] lg:max-h-[200px]"
+          className="object-contain w-full h-full max-h-[120px]  lg:max-h-[200px]"
         />
       </div>
 

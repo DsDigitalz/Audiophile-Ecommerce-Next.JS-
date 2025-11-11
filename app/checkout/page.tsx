@@ -8,7 +8,7 @@ import Image from "next/image";
 // --- Constants ---
 const ORANGE_ACCENT_BG = "bg-[#D87D4A]";
 const ORANGE_ACCENT_TEXT = "text-[#D87D4A]";
-const LIGHT_GRAY_BG = "#F1F1F1";
+// const LIGHT_GRAY_BG = "#F1F1F1";
 
 // --- Form Field Sub-component (Pixel-Perfect Spacing) ---
 interface InputProps extends React.InputHTMLAttributes<HTMLInputElement> {
@@ -27,7 +27,7 @@ const FormInput: React.FC<InputProps> = ({ label, id, ...props }) => (
     </label>
     <input
       id={id}
-      className="w-full h-[56px] border border-gray-300 rounded-lg px-6 text-[14px] font-bold text-black opacity-75 focus:outline-none focus:border-[#D87D4A] hover:border-[#D87D4A]/50 transition-colors"
+      className="w-full h-14 border border-gray-300 rounded-lg px-6 text-[14px] font-bold text-black opacity-75 focus:outline-none focus:border-[#D87D4A] hover:border-[#D87D4A]/50 transition-colors"
       {...props}
     />
   </div>
@@ -62,7 +62,7 @@ const OrderSummary = () => {
           <div key={item.id} className="flex justify-between items-center">
             {/* Item Details */}
             <div className="flex items-center space-x-4">
-              <div className="w-16 h-16 bg-gray-100 rounded-lg overflow-hidden flex items-center justify-center flex-shrink-0">
+              <div className="w-16 h-16 bg-gray-100 rounded-lg overflow-hidden flex items-center justify-center shrink-0">
                 <Image
                   src={item.image}
                   alt={item.name}
@@ -127,7 +127,7 @@ const OrderSummary = () => {
       <button
         type="submit"
         disabled={safeCart.length === 0}
-        className={`${ORANGE_ACCENT_BG} w-full text-white text-[13px] font-semibold uppercase h-[48px] tracking-widest hover:opacity-75 transition-opacity disabled:opacity-50 disabled:cursor-not-allowed`}
+        className={`${ORANGE_ACCENT_BG} w-full text-white text-[13px] font-semibold uppercase h-12 tracking-widest hover:opacity-75 transition-opacity disabled:opacity-50 disabled:cursor-not-allowed`}
       >
         CONTINUE & PAY
       </button>
@@ -165,7 +165,7 @@ export default function CheckoutPage() {
           }}
         >
           {/* LEFT SIDE: FORM DETAILS */}
-          <div className="bg-white p-6 md:p-8 lg:p-12 rounded-lg w-full lg:flex-grow">
+          <div className="bg-white p-6 md:p-8 lg:p-12 rounded-lg w-full lg:grow">
             <h1 className="text-[28px] md:text-3xl font-bold uppercase tracking-wider mb-8 md:mb-10 text-black">
               CHECKOUT
             </h1>
@@ -337,7 +337,7 @@ export default function CheckoutPage() {
                       height={48}
                     />
                     <p className="text-[15px] text-gray-500 leading-relaxed">
-                      The 'Cash on Delivery' option enables you to pay in cash
+                      The Cash on Delivery option enables you to pay in cash
                       when our delivery courier arrives at your residence. Just
                       make sure your address is correct.
                     </p>
