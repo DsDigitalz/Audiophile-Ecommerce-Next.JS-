@@ -188,7 +188,7 @@ export default function CartModal() {
                 </p>
               </div>
 
-              <Link href="/checkout" passHref legacyBehavior>
+              <Link href="/checkout" passHref >
                 <button
                   onClick={closeModal}
                   disabled={safeItems.length === 0}
