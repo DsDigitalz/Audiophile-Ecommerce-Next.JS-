@@ -1,4 +1,5 @@
-import { action, mutation, v } from "./_generated/server";
+import { action, mutation } from "./_generated/server";
+import { v } from "convex/values";
 import { api } from "./_generated/api";
 import { Id } from "./_generated/dataModel"; // ✅ Correct import
 import type { OrderPayload } from "../types/orderTypes";
@@ -8,7 +9,6 @@ import * as Resend from "resend";
 const resend = new Resend.Resend(process.env.RESEND_API_KEY!);
 
 // --- Create Order Mutation ---
-// Handles inserting a new order into the Convex DB
 export const create = mutation({
   args: {
     name: v.string(),
@@ -33,7 +33,6 @@ export const create = mutation({
 });
 
 // --- Submit Order Action ---
-// Called from frontend after user submits checkout form
 export const submitOrder = action({
   args: {
     payload: v.object({
@@ -64,7 +63,7 @@ export const submitOrder = action({
     // --- 2. Send Confirmation Email ---
     try {
       await resend.emails.send({
-        from: "Audiophile <onboarding@resend.dev>", // Must be verified in Resend
+        from: "Audiophile <onboarding@resend.dev>",
         to: payload.email,
         subject: `Order Confirmation #${(orderId as Id<"orders">).id.slice(0, 8)}`,
         html: `
@@ -91,7 +90,6 @@ export const submitOrder = action({
       });
     } catch (err) {
       console.error("❌ Email send failed:", err);
-      // Optionally log this to a separate table or alert admin
     }
 
     // --- 3. Return Order Info to Client ---
