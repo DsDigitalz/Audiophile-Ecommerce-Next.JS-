@@ -1,6 +1,6 @@
-// Updated placeOrder.ts with full email logic and schema alignment
-import { action, mutation, v } from "./_generated/server";
-import { api } from "./_generated/api";
+// placeOrder.ts - Fully updated and TypeScript-safe
+import { action, mutation } from "./_generated/server";
+import { v } from "convex/values";
 import * as Resend from "resend";
 
 // Initialize Resend
@@ -35,7 +35,7 @@ export const saveOrder = mutation({
   },
 });
 
-// --- Action: process placing an order + send confirmation email ---
+// --- Action: place order and send confirmation email ---
 export const placeOrder = action({
   args: {
     payload: v.object({
@@ -60,13 +60,13 @@ export const placeOrder = action({
   handler: async (ctx, args) => {
     const payload = args.payload;
 
-    // Save order
-    const orderId = await ctx.runMutation(api.placeOrder.saveOrder, {
+    // ✅ Save order using ctx.runMutation to fix TypeScript issues
+    const orderId = await ctx.runMutation(saveOrder, {
       ...payload,
       status: "pending",
     });
 
-    // Send confirmation email
+    // ✅ Send confirmation email
     await resend.emails.send({
       from: "Audiophile Shop <noreply@audiophile.com>",
       to: payload.email,
