@@ -13,7 +13,6 @@ import type {
   FilterApi,
   FunctionReference,
 } from "convex/server";
-import type * as placeOrder from "../placeOrder.js";
 
 /**
  * A utility for referencing Convex functions in your app's API.
@@ -23,14 +22,16 @@ import type * as placeOrder from "../placeOrder.js";
  * const myFunctionReference = api.myModule.myFunction;
  * ```
  */
-declare const fullApi: ApiFromModules<{
-  placeOrder: typeof placeOrder;
-}>;
+declare const fullApi: ApiFromModules<{}>;
+declare const fullApiWithMounts: typeof fullApi;
+
 export declare const api: FilterApi<
-  typeof fullApi,
+  typeof fullApiWithMounts,
   FunctionReference<any, "public">
 >;
 export declare const internal: FilterApi<
-  typeof fullApi,
+  typeof fullApiWithMounts,
   FunctionReference<any, "internal">
 >;
+
+export declare const components: {};
