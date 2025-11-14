@@ -9,7 +9,7 @@ const AboutUsSection: React.FC = () => {
   return (
     // Max width container for overall page alignment, centered, with padding
     <section 
-      className="max-w-[1440px] mx-auto px-6 md:px-10 lg:px-20 py-24 lg:py-40" 
+      className="max-w-[1440px] mx-auto px-6 md:px-10 lg:px-20 pt-10 pb-24 lg:py-40" 
       aria-label="About Audiophile Store"
     >
       

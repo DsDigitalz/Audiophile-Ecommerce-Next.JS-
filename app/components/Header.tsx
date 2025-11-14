@@ -72,7 +72,7 @@ const Header = () => {
       <div className="max-w-[1440px] mx-auto px-6 lg:px-20 border-b border-gray-700/50">
         <nav
           // Use the <nav> semantic tag for navigation links
-          className="flex items-center justify-between h-24"
+          className="flex items-center justify-between h-20"
           aria-label="Main Navigation"
         >
           {/* Hamburger Menu Icon (Mobile Only) */}
@@ -91,7 +91,7 @@ const Header = () => {
             className="text-2xl font-bold text-white tracking-widest uppercase mr-auto lg:mr-0"
           >
             {/* Using a <strong> tag for semantic logo emphasis */}
-            <Image src="/logo.svg" alt="" width={150} height={25} />
+            <Image src="/logo.svg" alt="" width={130} height={25} />
           </Link>
 
           {/* Desktop Navigation Links */}
@@ -122,7 +122,7 @@ const Header = () => {
       {isMenuOpen && (
         <div
           id="mobile-menu"
-          className="lg:hidden absolute top-24 left-0 w-full bg-[#141414] shadow-lg p-6"
+          className="lg:hidden absolute top-20 left-0 w-full bg-[#141414] shadow-lg p-6"
         >
           {/* Use the <ul> and <li> semantic tags for a list of links */}
           <ul className="flex flex-col gap-4">

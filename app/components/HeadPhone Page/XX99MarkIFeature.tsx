@@ -1,4 +1,5 @@
 // XX99MarkIIFeature.tsx
+import Image from "next/image";
 import Link from "next/link";
 // import Image from "next/image";
 import React from "react";
@@ -18,8 +19,8 @@ const XX99MarkIFeature = () => {
         {/* Left Section: Product Image */}
         {/* The image is contained within a rounded, light gray background. */}
         <div className="w-full md:w-1/2 bg-[#F1F1F1] rounded-lg flex items-center justify-center p-8 md:p-12 lg:p-20">
-          <img
-            src="headphonesimg2.png" // Replace with your actual image path
+          <Image
+            src="/headphonesimg2.png" // Replace with your actual image path
             alt="XX99 Mark I Headphones"
             width={540} // Optimized for desktop, object-contain will scale
             height={560} // Adjusted height to match aspect ratio

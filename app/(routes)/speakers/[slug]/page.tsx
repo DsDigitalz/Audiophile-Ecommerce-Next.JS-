@@ -185,7 +185,7 @@ const SpeakersPage = ({ params }: SpeakersPageProps) => {
     {
       name: "XX59",
       imageSrc: "/XX59img.png", // Placeholder image
-      href: "/headphones/xx59-mark-i", // Example link
+      href: "/headphones/xx59", // Example link
     },
   ];
 
@@ -203,7 +203,7 @@ const SpeakersPage = ({ params }: SpeakersPageProps) => {
 
       {/* 🎧 PRODUCT DETAIL SECTION */}
       <section
-        className={`max-w-[1440px] mx-auto flex flex-col ${flexOrderClasses} items-center justify-between gap-10 md:gap-16 lg:gap-[125px] mb-[120px] lg:mb-40`}
+        className={`max-w-[1440px] mx-auto flex flex-col ${flexOrderClasses} items-center justify-between gap-10 md:gap-16 lg:gap-[125px] mb-20 lg:mb-40`}
       >
         {/* Product Image Panel - Uses full width on mobile/tablet */}
 
@@ -235,7 +235,7 @@ const SpeakersPage = ({ params }: SpeakersPageProps) => {
           )}
 
           {/* Product Title - Correct font size and tight leading match the screenshot */}
-          <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold uppercase leading-tight mb-6 text-black w-1 ">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold uppercase leading-tight mb-6 text-black md:w-1 ">
             {product.name}
           </h1>
 

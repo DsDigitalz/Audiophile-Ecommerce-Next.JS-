@@ -58,7 +58,7 @@ const products = [
     newProduct: false,
   },
   {
-    id: "xx59-mark-i",
+    id: "xx59",
     name: "XX59 HEADPHONES",
     category: "HEADPHONES",
     price: 899,
@@ -203,7 +203,7 @@ const HeadPhonePage = () => {
 
       {/* --- 🎧 PRODUCT DETAIL SECTION (Semantic markup for the container) --- */}
       <section
-        className={`max-w-[1440px] mx-auto flex flex-col ${flexOrderClasses} items-center justify-between gap-10 md:gap-16 lg:gap-[125px] mb-[120px] lg:mb-40`}
+        className={`max-w-[1440px] mx-auto flex flex-col ${flexOrderClasses} items-center justify-between gap-10 md:gap-16 lg:gap-[125px] mb-20 lg:mb-40`}
         aria-label={`Details for ${product.name}`}
       >
         {/* Product Image Panel */}

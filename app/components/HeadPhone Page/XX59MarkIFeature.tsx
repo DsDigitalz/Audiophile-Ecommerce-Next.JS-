@@ -1,4 +1,5 @@
 // XX99MarkIIFeature.tsx
+import Image from "next/image";
 import Link from "next/link";
 // import Image from "next/image";
 import React from "react";
@@ -10,7 +11,7 @@ const XX59MarkIFeature = () => {
   return (
     // Max width container for overall page alignment, centered, with padding
     <section
-      className="max-w-[1440px] mx-auto px-6 md:px-10 lg:px-20 pt-10 pb-20"
+      className="max-w-[1440px] mx-auto px-6 md:px-10 lg:px-20 pt-10 pb-10"
       aria-label="XX99 Mark II Headphones Feature"
     >
       {/* Main Container - Responsive layout: Image on left, Text on right (default) */}
@@ -18,8 +19,8 @@ const XX59MarkIFeature = () => {
         {/* Left Section: Product Image */}
         {/* The image is contained within a rounded, light gray background. */}
         <div className="w-full md:w-1/2 bg-[#F1F1F1] rounded-lg flex items-center justify-center p-8 md:p-12 lg:p-20">
-          <img
-            src="headphonesimg3.png" // Replace with your actual image path
+          <Image
+            src="/headphonesimg3.png" // Replace with your actual image path
             alt="XX59 Mark I Headphones"
             width={540} // Optimized for desktop, object-contain will scale
             height={560} // Adjusted height to match aspect ratio
@@ -43,7 +44,7 @@ const XX59MarkIFeature = () => {
 
           {/* "SEE PRODUCT" Button */}
           <Link
-            href="/headphones/xx59-mark-i" // Example link
+            href="/headphones/xx59" // Example link
             // style={{ backgroundColor: ORANGE_ACCENT }}
             className="inline-block bg-[#D87D4A] hover:bg-[#FBAF85] transition-opacity text-white text-sm font-semibold uppercase px-8 py-4 tracking-widest"
           >

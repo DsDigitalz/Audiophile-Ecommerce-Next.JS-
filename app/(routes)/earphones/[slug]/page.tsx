@@ -137,7 +137,7 @@ export default function EarPhonePage() {
 
       {/* PRODUCT SECTION */}
       <section
-        className={`max-w-[1440px] mx-auto flex flex-col ${flexOrderClasses} items-center justify-between gap-10 md:gap-16 lg:gap-[125px] mb-[120px] lg:mb-40`}
+        className={`max-w-[1440px] mx-auto flex flex-col ${flexOrderClasses} items-center justify-between gap-10 md:gap-16 lg:gap-[125px] mb-20 lg:mb-40`}
       >
         <div
           className="w-full md:w-1/2 bg-gray-100 rounded-lg flex items-center justify-center p-8 md:p-12 lg:p-20"

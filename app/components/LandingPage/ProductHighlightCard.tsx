@@ -10,27 +10,27 @@ const ProductHighlightCard = () => {
         <article
           // The main container with the distinct orange background and rounded corners
           // Using `relative` for positioning of the image and background circles
-          className="relative bg-[#D87D4A] rounded-lg p-8 md:p-12 lg:pb-24  overflow-hidden text-white flex flex-col lg:flex-row items-center justify-between gap-12"
+          className="relative bg-[#D87D4A] rounded-lg p-8 md:p-12 lg:pb-24  overflow-hidden text-white flex flex-col lg:flex-row items-center justify-around gap-12"
         >
           {/* Background Circles (for decorative effect matching the design)
                 These are positioned absolutely and will be large and slightly transparent.
                 Use `aria-hidden` as they are purely decorative.
             */}
           <div
-            className="absolute top-0 left-1/2 w-[944px] h-[944px] -translate-x-1/2 rounded-full border border-white border-opacity-20 pointer-events-none"
+            className="absolute top-10 left-1/2 w-[944px] h-[944px] -translate-x-1/2 rounded-full border border-[#ffffff5d] border-opacity-20 pointer-events-none"
             aria-hidden="true"
           ></div>
           <div
-            className="absolute top-[8%] left-1/2 w-[800px] h-[800px] -translate-x-1/2 rounded-full border border-white border-opacity-20 pointer-events-none"
+            className="absolute top-[20%] left-1/2 w-[800px] h-[800px] -translate-x-1/2 rounded-full border border-[#ffffff5d] border-opacity-20 pointer-events-none"
             aria-hidden="true"
           ></div>
           <div
-            className="absolute top-[16%] left-1/2 w-[650px] h-[650px] -translate-x-1/2 rounded-full border border-white border-opacity-20 pointer-events-none"
+            className="absolute top-[30%] left-1/2 w-[650px] h-[650px] -translate-x-1/2 rounded-full border border-[#ffffff5d] border-opacity-20 pointer-events-none"
             aria-hidden="true"
           ></div>
 
           {/* Product Image - Left Side */}
-          <div className="relative w-full max-w-sm h-64 md:h-96 lg:w-1/2 lg:h-[400px] flex justify-center lg:justify-start z-10">
+          <div className="relative w-ful max-w-sm h-64 md:h-96 lg:w-1/2 lg:h-[400px] flex justify-center lg:justify-start z-10">
             <img
               src="speaker1.png" // Path to your ZX9 speaker image
               alt="ZX9 Speaker - Phenomenally built to deliver truly remarkable sound."
