@@ -16,6 +16,6 @@ export default defineSchema({
     ),
     grandTotal: v.number(),
     status: v.string(),
-    createdAt: v.optional(v.number()),
-  }),
+    createdAt: v.number(),
+  }).index("by_createdAt", ["createdAt"]),
 });
