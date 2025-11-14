@@ -22,7 +22,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${manrope.variable}antialiased`}>
+      <body className={`${manrope.variable} antialiased`}>
         <Header />
         <main>{children}</main>
         {/* 🚨 CartModal is correctly placed here 🚨 */}

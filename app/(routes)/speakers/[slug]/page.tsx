@@ -43,6 +43,24 @@ const products = [
     altText: "ZX9 Speaker product view",
     color: "black",
     newProduct: true,
+
+    related: [
+      {
+        name: "ZX7 Speaker",
+        imageSrc: "/ZX7img.png",
+        href: "/speakers/zx7",
+      },
+      {
+        name: "XX99 MARK I",
+        imageSrc: "/XX99MarkIimg.png",
+        href: "/headphones/xx99-mark-i",
+      },
+      {
+        name: "XX59",
+        imageSrc: "/XX59img.png",
+        href: "/headphones/xx59",
+      },
+    ],
   },
   {
     id: "zx7",
@@ -66,6 +84,23 @@ const products = [
     altText: "ZX7 Speaker product view",
     color: "black-gold",
     newProduct: false,
+     related: [
+      {
+        name: "ZX9 Speaker",
+        imageSrc: "/speakersimg1.png",
+        href: "/speakers/zx9",
+      },
+      {
+        name: "XX99 MARK I",
+        imageSrc: "/XX99MarkIimg.png",
+        href: "/headphones/xx99-mark-i",
+      },
+      {
+        name: "XX59",
+        imageSrc: "/XX59img.png",
+        href: "/headphones/xx59",
+      },
+    ],
   },
 ];
 
@@ -171,30 +206,14 @@ const SpeakersPage = ({ params }: SpeakersPageProps) => {
     );
   };
 
-  const suggestedProducts = [
-    {
-      name: "ZX9 Speaker",
-      imageSrc: "/speakersimg1.png", // Placeholder image
-      href: "/speakers/zx9", // Example link
-    },
-    {
-      name: "XX99 MARK I",
-      imageSrc: "/XX99MarkIimg.png", // Placeholder image
-      href: "/headphones/xx99-mark-i", // Example link
-    },
-    {
-      name: "XX59",
-      imageSrc: "/XX59img.png", // Placeholder image
-      href: "/headphones/xx59", // Example link
-    },
-  ];
+  const suggestedProducts = product.related;
 
   return (
     <main className="max-w-[1440px] mx-auto px-6 md:px-10 lg:px-20 py-8 md:py-12 lg:py-20">
       {/* 1. Go Back Link */}
       <div className="mb-6 md:mb-8">
         <Link
-          href="/headphones/zx9"
+          href="/speakers"
           className="text-gray-500 hover:text-gray-900 transition-colors text-base"
         >
           Go Back

@@ -12,6 +12,7 @@ const LIGHT_GRAY_BG = "#F1F1F1";
 
 // --- MOCK DATA (Should be external, but kept here for a single-file solution) ---
 const products = [
+ 
   {
     id: "xx99-mark-ii",
     name: "XX99 MARK II HEADPHONES",
@@ -34,7 +35,27 @@ const products = [
     altText: "XX99 Mark II Headphones product view",
     color: "black",
     newProduct: true,
+
+    // related products
+    related: [
+      {
+        name: "XX99 MARK I",
+        imageSrc: "/XX99MarkIimg.png",
+        href: "/headphones/xx99-mark-i",
+      },
+      {
+        name: "XX59",
+        imageSrc: "/XX59img.png",
+        href: "/headphones/xx59",
+      },
+      {
+        name: "ZX9 SPEAKER",
+        imageSrc: "/speakersimg1.png",
+        href: "/speakers/zx9",
+      },
+    ]
   },
+
   {
     id: "xx99-mark-i",
     name: "XX99 MARK I HEADPHONES",
@@ -56,7 +77,28 @@ const products = [
     altText: "XX99 Mark I Headphones product view",
     color: "black-gold",
     newProduct: false,
+
+    // related products
+    related:[
+      {
+        name:"XX99 MARK II",
+        imageSrc:"/headphonesimg.png",
+        href:"/headphones/xx99-mark-ii"
+      },
+      {
+        name:"XX59",
+        imageSrc:"/XX59img.png",
+        href:"/headphones/xx59",
+      },
+      {
+        name:"ZX9 SPEAKER",
+        imageSrc:"/speakersimg1.png",
+        href:"/headphones/zx9",
+      }
+    ]
+
   },
+
   {
     id: "xx59",
     name: "XX59 HEADPHONES",
@@ -78,22 +120,41 @@ const products = [
     altText: " XX59 Headphones product view",
     color: "gray",
     newProduct: false,
+
+    related:[
+      {
+        name:"XX99 MARK II",
+        imageSrc:"/headphonesimg.png",
+        href:"/headphones/xx99-mark-ii",
+      },
+      {
+        name:"XX99 MARK I",
+        imageSrc:"/XX99MarkIimg.png",
+        href:"/headphones/xx99-mark-i",
+      },
+      {
+        name:"ZX9 SPEAKER",
+        imageSrc:"/speakersimg1.png",
+        href:"/speakers/zx9",
+      },
+    ]
   },
 ];
 
-const relatedProducts = [
-  {
-    name: "XX99 MARK II",
-    imageSrc: "/headphonesimg.png",
-    href: "/headphones/xx99-mark-ii",
-  },
-  {
-    name: "XX99 MARK I",
-    imageSrc: "/headphonesimg2.png",
-    href: "/headphones/xx99-mark-i",
-  },
-  { name: "ZX9 SPEAKER", imageSrc: "/speakersimg1.png", href: "/speakers/zx9" },
-];
+// const relatedProducts = [
+//   {
+//     name: "XX99 MARK I",
+//     imageSrc: "/XX99MarkIimg.png",
+//     href: "/headphones/xx99-mark-i",
+//   },
+//   {
+//     name: "XX59",
+//     imageSrc: "/XX59img.png",
+//     href: "/headphones/xx59",
+//   },
+//   { name: "ZX9 SPEAKER", imageSrc: "/speakersimg1.png", href: "/speakers/zx9" },
+// ];
+
 // --- END MOCK DATA ---
 
 // --- SUB-COMPONENT: SuggestedProductCard ---
@@ -349,19 +410,21 @@ const HeadPhonePage = () => {
       </section>
 
       {/* --- YOU MAY ALSO LIKE --- */}
-      <section
-        className="max-w-[1440px] mx-auto py-16 md:py-24"
-        aria-label="You May Also Like"
-      >
-        <h2 className="text-center text-3xl sm:text-4xl font-bold uppercase mb-12 md:mb-16 text-black">
-          YOU MAY ALSO LIKE
-        </h2>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-y-16 md:gap-x-4 lg:gap-x-8">
-          {relatedProducts.map((p, index) => (
-            <SuggestedProductCard key={index} {...p} />
-          ))}
-        </div>
-      </section>
+     <section
+  className="max-w-[1440px] mx-auto py-16 md:py-24"
+  aria-label="You May Also Like"
+>
+  <h2 className="text-center text-3xl sm:text-4xl font-bold uppercase mb-12 md:mb-16 text-black">
+    YOU MAY ALSO LIKE
+  </h2>
+
+  <div className="grid grid-cols-1 md:grid-cols-3 gap-y-16 md:gap-x-4 lg:gap-x-8">
+    {product.related.map((p, index) => (
+      <SuggestedProductCard key={index} {...p} />
+    ))}
+  </div>
+</section>
+
     </main>
   );
 };

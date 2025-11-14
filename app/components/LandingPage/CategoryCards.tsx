@@ -27,7 +27,7 @@ const CategoryCards = () => {
   return (
     // Semantic Markup: Using <section> for this block of related content.
     <section
-      className=" max-w-[1440px] mx-auto px-6 md:px-10 lg:px-20 pt-30 pb-20 md:py-40 lg:pb-20"
+      className=" max-w-[1440px] mx-auto px-6 md:px-10 lg:px-20 pt-30 pb-20 md:py-50 lg:pb-20"
       aria-label="Product Categories"
     >
       <div

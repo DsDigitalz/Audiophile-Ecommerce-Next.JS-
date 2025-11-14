@@ -51,8 +51,8 @@ const suggestedProducts = [
   },
   {
     name: "ZX9 SPEAKER",
-    imageSrc: "/ZX9img.png",
-    href: "/speakers/zx9-speaker",
+    imageSrc: "/speakersimg1.png",
+    href: "/speakers/zx9",
   },
 ];
 
